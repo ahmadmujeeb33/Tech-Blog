@@ -25,8 +25,8 @@ Posts.init(
         defaultValue: DataTypes.NOW,
       },
     content: {
-    type: DataTypes.STRING,
-    allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
 
     User_id: {
@@ -45,8 +45,8 @@ Posts.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'User',
   }
 );
 
-module.exports = User;
+module.exports = Posts;
