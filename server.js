@@ -8,11 +8,11 @@ const path = require('path');
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 2080;
 
 app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the routes
-app.use(require('./controllers'));
+app.use(require('./Controllers/home-Routes'));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
