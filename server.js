@@ -4,6 +4,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 const path = require('path');
+const routes = require('./Controllers');
 
 
 // Sets up the Express App
@@ -12,7 +13,7 @@ const PORT = process.env.PORT || 2080;
 
 app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the routes
-app.use(require('./Controllers/home-Routes'));
+app.use(require(routes));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
