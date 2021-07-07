@@ -6,15 +6,29 @@ const hbs = exphbs.create({});
 const path = require('path');
 const routes = require('./Controllers');
 const sequelize = require('./Config/connection');
+const session = require('express-session');
+
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: true,
+};
+
+app.use(session(sess));
+
+
 
 
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 2080;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the routes
-app.use(require(routes));
+app.use(routes);
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
