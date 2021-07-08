@@ -14,7 +14,7 @@ const sess = {
   saveUninitialized: true,
 };
 
-app.use(session(sess));
+
 
 
 
@@ -23,6 +23,7 @@ app.use(session(sess));
 const app = express();
 const PORT = process.env.PORT || 2080;
 
+app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

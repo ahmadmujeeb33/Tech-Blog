@@ -4,8 +4,11 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   console.log(req.body)
 try {
-  const userData = await User.create(req.body);
-
+  const userData = await User.create({
+    username: req.body.username,
+    password: req.body.password
+  });
+  console.log("in here")
   req.session.save(() => {
     req.session.loggedIn = true;
 
@@ -19,12 +22,11 @@ try {
 
 // Login
 router.post('/login', async (req, res) => {
+    console.log("in this");
     const dbUserData = await User.findOne({
-      where: {
-        email: req.body.email,
-      },
+      where: { username: req.body.username }
     });
-    const validPassword = await dbUserData.checkPassword(req.body.password);
+    // const validPassword = await dbUserData.checkPassword(req.body.password);
 
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
@@ -34,19 +36,20 @@ router.post('/login', async (req, res) => {
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
+    console.log("finished");
   
 });
 
-router.post('/logout', (req, res) => {
-  // When the user logs out, destroy the session
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
-  }
-});
+// router.post('/logout', (req, res) => {
+//   // When the user logs out, destroy the session
+//   if (req.session.loggedIn) {
+//     req.session.destroy(() => {
+//       res.status(204).end();
+//     });
+//   } else {
+//     res.status(404).end();
+//   }
+// });
 
 
 
