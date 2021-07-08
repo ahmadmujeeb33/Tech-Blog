@@ -15,7 +15,7 @@ router.get('/dashboard', async(req,res) =>{
 })
 
 router.get('/dashboard/new', async(req,res)=>{
-    
+    res.render('new');
 })
 
 
