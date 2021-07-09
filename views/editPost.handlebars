@@ -3,6 +3,8 @@
 <div>
     <p>Title</p>
 
+    <p style="display: none;" id='{{postData.id}}' class="tableId"></p>
+
     <textarea class="edittitle">{{postData.title}}</textarea>
 
     <p>Content</p>
@@ -10,10 +12,14 @@
     <textarea class="editcontent">{{postData.content}}</textarea>
 
     <div class="Update">
-        <p id = '{{postData.id}}' class="id">Update</p>
+        <a href="/dashboard"  class="id">Update</a>
+    </div>
+
+    <div class="Delete">
+        <a href="/dashboard"  class="deletebutton">Delete</a>
     </div>
     
-    <p class="Delete">Delete</p>
+    
 </div>
 
 <script rel="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

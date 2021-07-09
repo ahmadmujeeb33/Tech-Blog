@@ -22,7 +22,7 @@ try {
 
 // Login
 router.post('/login', async (req, res) => {
-    console.log("in this");
+  
     const dbUserData = await User.findOne({
       where: { username: req.body.username }
     });

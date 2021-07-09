@@ -17,7 +17,7 @@ router.get('/dashboard', async(req,res) =>{
           user_id:req.session.user_id
         }
       });
-    console.log(PostsData)
+   
     res.render('dashboard', {PostsData});
     
 })
