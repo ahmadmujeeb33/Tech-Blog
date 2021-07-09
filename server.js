@@ -40,7 +40,6 @@ app.engine("handlebars",exphbs({
 })
 );
 app.set('view engine', 'handlebars');
-
 // Starts the server to begin listening
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
