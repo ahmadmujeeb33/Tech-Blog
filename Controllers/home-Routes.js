@@ -10,6 +10,7 @@ router.get('/login', async(req,res) =>{
 })
 
 router.get('/dashboard', async(req,res) =>{
+    console.log("in this one");
     const PostsData = await Posts.findAll({
         // Add Book as a second model to JOIN with
         where:{

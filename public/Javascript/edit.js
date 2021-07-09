@@ -2,6 +2,14 @@
 
 let updateButton = $('.Update');
 
+async function getDashBoard(){
+    console.log("eo;ihlfdkukjducxjohlj0");
+    const response1 = await fetch('/dashboard', {
+        method: 'GET',  
+        headers: { 'Content-Type': 'application/json' },
+    });
+}
+
 
 updateButton.on('click','.id',async function(){
     const title1 = document.querySelector('.edittitle').value.trim();
@@ -13,10 +21,9 @@ updateButton.on('click','.id',async function(){
         method: 'PUT',
         body: JSON.stringify({title:title1,content:content1}),  
         headers: { 'Content-Type': 'application/json' },
-      });
+    });
   
-
-
+    getDashBoard();
 })
 
 document
