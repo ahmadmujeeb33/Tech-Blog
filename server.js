@@ -31,7 +31,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the routes
 app.use(routes);
 
-app.engine('handlebars', hbs.engine);
+// app.engine('handlebars', hbs.engine);
+app.engine("handlebars",exphbs({
+  runtimeOptions: {
+  allowProtoPropertiesByDefault: true,
+  allowProtoMethodsByDefault: true,
+  },
+})
+);
 app.set('view engine', 'handlebars');
 
 // Starts the server to begin listening
