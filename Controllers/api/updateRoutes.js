@@ -1,9 +1,9 @@
 const router = require('express').Router();
+const { Posts } = require('../../models');
 
-
-router.post('/:id', async(req,res) =>{
+router.put('/:id', async(req,res) =>{
    console.log("we here boyzz")
-    Recipe.update(
+   Posts.update(
         {
             title: req.body.title,
             content: req.body.content,
