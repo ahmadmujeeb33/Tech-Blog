@@ -4,7 +4,7 @@
 
 
 
-document.querySelector('.createButton').addEventListener('click', ()=>{
+document.querySelector('.createButton').addEventListener('click', async()=>{
     console.log("in this here ");
 
     const title = document.querySelector('.title').value.trim();
@@ -13,7 +13,7 @@ document.querySelector('.createButton').addEventListener('click', ()=>{
 
 
 
-    const response = fetch('/api/createPost', {
+    const response = await fetch('/api/createPost', {
         method: 'POST',
         body: JSON.stringify({title, content}),
         headers: { 'Content-Type': 'application/json' },

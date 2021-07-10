@@ -18,7 +18,6 @@ updateButton.on('click','.id',async function(){
 })
 
 deleteButton.on('click','.deletebutton', async()=>{
-    alert("id " + id);
     const response = await fetch(`/api/deletePosts/${id}`, {
         method: 'DELETE',
     });
