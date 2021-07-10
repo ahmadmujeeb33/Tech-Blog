@@ -1,17 +1,24 @@
 const router = require('express').Router();
-const {User, Posts } = require('../models');
+const {User, Posts,Comments } = require('../models');
 
 router.get('/', async(req,res) =>{
-    const PostsData = await Posts.findAll({
+
+    const allData = await Comments.findAll({
         include: [
             {
               model: User,
               attributes: ['username'],
             },
+
+            {
+              model: Posts,
+              attributes: ['title', 'content'],
+
+            },
           ],
     
     });
-    res.render('HomePage',{loggedIn: req.session.loggedIn, PostsData});
+    res.render('HomePage',{loggedIn: req.session.loggedIn, allData});
 })
 
 router.get('/login', async(req,res) =>{
