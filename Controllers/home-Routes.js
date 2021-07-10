@@ -45,5 +45,16 @@ router.get('/dashboard/edit/:id', async (req, res) => {
     }
   });
 
+router.get('/BlogInfo/:id', async(req,res) =>{
+    try {
+        const PostsData = await Posts.findByPk(req.params.id)
+    
+        res.render('BlogInfo',{PostsData});
+      } catch (err) {
+        res.status(500).json(err);
+    }
+    
+})
+
 
 module.exports = router;

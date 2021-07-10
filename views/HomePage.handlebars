@@ -2,12 +2,15 @@
 
 {{#each PostsData as |Data|}}
 
-    <h1>Ttile</h1>
+    <a href="/BlogInfo/{{Data.id}}"><div class="Blog-Posts">
+        <h1>Ttile</h1>
 
-    <p>{{Data.title}}</p>
+        <p>{{Data.title}}</p>
 
-    <h1>Content</h1>
-    <p>{{Data.content}}</p>
+        <h1>Content</h1>
+        <p>{{Data.content}}</p>
+
+    </div></a>
 
     <h1>User</h1>
     <p>{{Data.User.username}}</p>
