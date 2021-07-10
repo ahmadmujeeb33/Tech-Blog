@@ -3,7 +3,7 @@ const {User, Posts,Comments } = require('../models');
 
 router.get('/', async(req,res) =>{
 
-    const allData = await Comments.findAll({
+    const allData = await Posts.findAll({
         include: [
             {
               model: User,
@@ -11,13 +11,16 @@ router.get('/', async(req,res) =>{
             },
 
             {
-              model: Posts,
-              attributes: ['title', 'content'],
+              model: Comments,
+              attributes: ['content'],
 
             },
           ],
     
     });
+    // const postData = allData.map(post => post.get({}))
+    // console.log(postData)
+    console.log(allData);
     res.render('HomePage',{loggedIn: req.session.loggedIn, allData});
 })
 
