@@ -20,8 +20,10 @@ router.get('/', async(req,res) =>{
     });
     // const postData = allData.map(post => post.get({}))
     // console.log(postData)
-    console.log(allData);
-    res.render('HomePage',{loggedIn: req.session.loggedIn, allData});
+    // console.log(allData);
+    console.log("this one" +  req.session.loggedIn);
+
+    res.render('HomePage',{ allData, loggedIn: req.session.loggedIn});
 })
 
 router.get('/login', async(req,res) =>{

@@ -2,16 +2,27 @@
 
 {{#each allData as |Data|}}
 
-    <a href="/BlogInfo/{{Data.id}}"><div class="Blog-Posts">
-        <h1>Ttile</h1>
+    <div class="Blog-Posts">
+        {{#if loggedIn}}
+            <a href="/BlogInfo/{{Data.id}}">
+            <h1>Ttile</h1>
+            <p>{{Data.title}}</p>
+            <h1>Content</h1>
+            <p>{{Data.content}}</p></a>
 
-        <p>{{Data.title}}</p>
+        {{else}}
+            <a href="/login">
+            <h1>Ttile</h1>
+            <p>{{Data.title}}</p>
+            <h1>Content</h1>
+            <p>{{Data.content}}</p></a>
 
-        <h1>Content</h1>
-        <p>{{Data.content}}</p>
+        {{/if}}
 
-    </div></a>
+    </div>
 
+    
+    
     <h1>User</h1>
     <p>{{Data.User.username}}</p>
 
