@@ -1,11 +1,12 @@
 
-
+{{log loggedIn}}
 {{#each allData as |Data|}}
 
+    {{log ../loggedIn}}
     <div class="Blog-Posts">
-        {{#if loggedIn}}
+        {{#if ../loggedIn}}
             <a href="/BlogInfo/{{Data.id}}">
-            <h1>Ttile</h1>
+            <h1>It works</h1>
             <p>{{Data.title}}</p>
             <h1>Content</h1>
             <p>{{Data.content}}</p></a>
