@@ -26,7 +26,7 @@ router.get('/', async(req,res) =>{
     res.render('HomePage',{ allData, loggedIn: req.session.loggedIn});
 })
 
-router.get('/login', async(req,res) =>{
+router.get('/login', (req,res) =>{
     res.render('login');
 })
 
@@ -43,11 +43,11 @@ router.get('/dashboard', async(req,res) =>{
     
 })
 
-router.get('/dashboard/new', async(req,res)=>{
+router.get('/dashboard/new', (req,res)=>{
     res.render('new', {loggedIn: req.session.loggedIn});
 })
 
-router.get('/dashboard/edit/:id', async (req, res) => {
+router.get('/dashboard/edit/:id', async(req, res) => {
     try {
       const postData = await Posts.findByPk(req.params.id)
   

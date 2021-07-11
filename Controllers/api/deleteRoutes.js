@@ -4,7 +4,6 @@ const {Posts} = require('../../models');
 
 
 router.delete('/:id', async (req, res) => {
-    console.log("in thisdsfv");
     try {
       const postsData = await Posts.destroy({
         where: {
