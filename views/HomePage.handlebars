@@ -5,25 +5,24 @@
         {{!-- {{log ../loggedIn}} --}}
         <div class="Blog-Posts">
             {{#if ../loggedIn}}
-                <a style="text-decoration:none" href="/BlogInfo/{{Data.id}}">
-
-                    <div class="postTitle">
-                        <p>{{Data.title}}</p>
-                        <div class="postContent">
-                            <span>{{Data.content}}</span>
-                        </div>
+               <a style="text-decoration:none" href="/login">
+                    <div class="Post">
+                        <span class="title">{{Data.title}}</span> 
+                        <span class = "UserandDate" >Posted By {{Data.User.username}} on {{Data.date_created}}</span>
                     </div>
-
-                </a>
+                
+                {{!-- <h1>Content</h1> --}}
+                <span class="postContent">{{Data.content}}</span></a>
                 
                 {{!-- <h1>Content</h1> --}}
                 
 
             {{else}}
                 <a style="text-decoration:none" href="/login">
-                <span class="postTitle">{{Data.title}}
-                    {{Data.date_created}}
-                </span>
+                <div class="Post">
+                    <span>{{Data.title}}</span> 
+                    <span>Posted By {{Data.User.username}} on {{Data.date_created}}</span>
+                </div>
                 
                 {{!-- <h1>Content</h1> --}}
                 <span class="postContent">{{Data.content}}</span></a>

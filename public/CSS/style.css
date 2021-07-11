@@ -36,12 +36,16 @@ nav a{
     padding-top: 20px;
 }
 
-.postTitle{
+.Post{
     display: flex;
-    justify-content: center;;
+    justify-content: space-between;
     background-color: #000000FF;
     width: 90%;
     height: 30px;
+   
+}
+
+.Post span{
     color: white;
 }
 
@@ -54,8 +58,5 @@ nav a{
     
 }
 
-.date{
-   align-items: flex-end;
-}
 
 

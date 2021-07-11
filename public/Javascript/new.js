@@ -2,8 +2,8 @@
 document.querySelector('.createButton').addEventListener('click', async()=>{
     console.log("in this here ");
 
-    const title = document.querySelector('.title').value.trim();
-    const content = document.querySelector('.content').value.trim();
+    const title = document.querySelector('.title2').value.trim();
+    const content = document.querySelector('.content2').value.trim();
 
 
 
