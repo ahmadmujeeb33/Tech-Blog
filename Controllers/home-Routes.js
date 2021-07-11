@@ -39,34 +39,45 @@ router.get('/dashboard', async(req,res) =>{
         }
       });
    
-    res.render('dashboard', {PostsData});
+    res.render('dashboard', {PostsData,loggedIn: req.session.loggedIn});
     
 })
 
 router.get('/dashboard/new', async(req,res)=>{
-    res.render('new');
+    res.render('new', {loggedIn: req.session.loggedIn});
 })
 
 router.get('/dashboard/edit/:id', async (req, res) => {
     try {
       const postData = await Posts.findByPk(req.params.id)
   
-      res.render('editPost',{postData});
+      res.render('editPost',{postData, loggedIn: req.session.loggedIn});
     } catch (err) {
       res.status(500).json(err);
     }
   });
 
 router.get('/BlogInfo/:id', async(req,res) =>{
-    try {
-        const PostsData = await Posts.findByPk(req.params.id)
+  try {
+    const PostsData = await Posts.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    // const project = projectData.get({ plain: true });
+
+    res.render('BlogInfo', { PostsData,loggedIn: req.session.loggedIn});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
     
-        res.render('BlogInfo',{PostsData});
-      } catch (err) {
-        res.status(500).json(err);
-    }
-    
-})
+
 
 
 module.exports = router;

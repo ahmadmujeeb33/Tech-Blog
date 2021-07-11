@@ -2,7 +2,7 @@
 {{log loggedIn}}
 {{#each allData as |Data|}}
 
-    {{log ../loggedIn}}
+    {{!-- {{log ../loggedIn}} --}}
     <div class="Blog-Posts">
         {{#if ../loggedIn}}
             <a href="/BlogInfo/{{Data.id}}">
