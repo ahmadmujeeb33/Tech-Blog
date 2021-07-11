@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+
+nav{
+    background-color: black;
+    height: 150px;
+    padding: 0;
+}
+nav a{
+    color: white;
+    padding-right: 8px;
+
+}
+
+.titleBorder{
+    background-color:blue;
+    width: 320px;
+    height: 130px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.homePage{
+    background-color:beige;
+    height: 100vh;
+}
+
+.Blog-Posts{
+    
+    padding-top: 20px;
+}
+
+.postTitle{
+    display: flex;
+    justify-content: center;;
+    background-color: #000000FF;
+    width: 90%;
+    height: 30px;
+    color: white;
+}
+
+.postContent{
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFFFF;
+    width: 90%;
+    height: 30px;
+    
+}
+
+.date{
+   align-items: flex-end;
+}
+
+

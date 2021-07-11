@@ -1,37 +1,47 @@
+<div class="homePage">
+    {{log loggedIn}}
+    {{#each allData as |Data|}}
 
-{{log loggedIn}}
-{{#each allData as |Data|}}
+        {{!-- {{log ../loggedIn}} --}}
+        <div class="Blog-Posts">
+            {{#if ../loggedIn}}
+                <a style="text-decoration:none" href="/BlogInfo/{{Data.id}}">
 
-    {{!-- {{log ../loggedIn}} --}}
-    <div class="Blog-Posts">
-        {{#if ../loggedIn}}
-            <a href="/BlogInfo/{{Data.id}}">
-            <h1>It works</h1>
-            <p>{{Data.title}}</p>
-            <h1>Content</h1>
-            <p>{{Data.content}}</p></a>
+                    <div class="postTitle">
+                        <p>{{Data.title}}</p>
+                        <div class="postContent">
+                            <span>{{Data.content}}</span>
+                        </div>
+                    </div>
 
-        {{else}}
-            <a href="/login">
-            <h1>Ttile</h1>
-            <p>{{Data.title}}</p>
-            <h1>Content</h1>
-            <p>{{Data.content}}</p></a>
+                </a>
+                
+                {{!-- <h1>Content</h1> --}}
+                
 
-        {{/if}}
+            {{else}}
+                <a style="text-decoration:none" href="/login">
+                <span class="postTitle">{{Data.title}}
+                    {{Data.date_created}}
+                </span>
+                
+                {{!-- <h1>Content</h1> --}}
+                <span class="postContent">{{Data.content}}</span></a>
 
-    </div>
+            {{/if}}
 
+        </div>
+
+</div>  
     
-    
-    <h1>User</h1>
+    {{!-- <h1>User</h1>
     <p>{{Data.User.username}}</p>
 
     <h1>Comments</h1>
 
     {{#each Data.Comments as |comments| }}
         <p>{{comments.content}}</p>
-    {{/each}}
+    {{/each}} --}}
        
 
 {{/each}}
