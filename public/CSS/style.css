@@ -65,8 +65,11 @@ nav a{
 }
 
 .allComments{
+    display: flex;
+    justify-content: space-between;
     background-color: black;
-    height: 30px;
+    height: 60px;
+    margin-top: 30px;
     
 }
 

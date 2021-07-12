@@ -16,7 +16,7 @@
     {{#each PostsData.Comments as |comments| }}
         <div class="allComments">
             <p style="color:white;">{{comments.content}}</p>
-            <span>Posted By {{comments.User.username}} on {{comments.date}}</span>
+            <span style="color:white;">Comment Posted By {{comments.User.username}} on {{comments.date}}</span>
         </div>
     {{/each}}
    
@@ -25,7 +25,9 @@
 
     <textarea class="commentText"></textarea>
     
-    <a class="submit" href="/" style="text-decoration: none;">Submit</a>
+    <a class="submit" href="/BlogInfo/{{PostsData.id}}" style="text-decoration: none;">Submit</a>
+
+    <div style="display: none;" id="{{PostsData.id}}" class="tableId"></div>
 
 </div>
     
