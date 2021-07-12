@@ -2,12 +2,11 @@
     {{log loggedIn}}
     <div class="Blog-Posts">
         {{#each allData as |Data|}}
-
-        
         
             {{log ../loggedIn}}
+
             {{#if ../loggedIn}}
-               <a  style="text-decoration:none;" href="/BlogInfo/{{Data.id}}">
+                <a  style="text-decoration:none;" href="/BlogInfo/{{Data.id}}">
                     <div class="Post" style="margin-top: 30px;">
                         <span class="title">{{Data.title}}</span> 
                         <span class = "UserandDate" >Posted By {{Data.User.username}} on {{Data.date_created}}</span>
