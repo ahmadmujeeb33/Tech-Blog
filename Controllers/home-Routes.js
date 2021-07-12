@@ -65,7 +65,21 @@ router.get('/BlogInfo/:id', async(req,res) =>{
           model: User,
           attributes: ['username'],
         },
+
+        {
+          model: Comments,
+          attributes: ['content', 'date'],
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            }
+
+          ]
+        },
+
       ],
+
     });
 
     // const project = projectData.get({ plain: true });

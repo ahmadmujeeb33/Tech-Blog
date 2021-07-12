@@ -8,6 +8,7 @@ router.post('/', async(req,res) =>{
         user_id: req.session.user_id,
         post_id:req.body.post_id
     });
+    res.status(200).end();
 })
 
 

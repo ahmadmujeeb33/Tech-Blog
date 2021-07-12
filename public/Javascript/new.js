@@ -12,5 +12,12 @@ document.querySelector('.createButton').addEventListener('click', async()=>{
         method: 'POST',
         body: JSON.stringify({title, content}),
         headers: { 'Content-Type': 'application/json' },
+
+
     });
+
+    console.log("in here")
+
+    document.location.replace('/dashboard');
+
 });

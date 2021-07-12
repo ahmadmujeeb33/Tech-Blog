@@ -1,26 +1,34 @@
-
+<div class="infoPage">
     <div class="Blog-Posts">
-        <h1>Ttile</h1>
+        <div class="Post">
+            <span>{{PostsData.title}}</span> 
+            <span>Posted By {{PostsData.User.username}} on {{PostsData.date_created}}</span>
+        </div>
 
-        <p>{{PostsData.title}}</p>
+        <span class="postContent">{{PostsData.content}}</span>
 
-        <h1>Content</h1>
-        <p>{{PostsData.content}}</p>
+
+       
 
     </div>
 
-    <h1>User</h1>
-    <p>{{PostsData.User.username}}</p>
-
+    {{log PostsData.Comments}}
+    {{#each PostsData.Comments as |comments| }}
+        <div class="allComments">
+            <p style="color:white;">{{comments.content}}</p>
+            <span>Posted By {{comments.User.username}} on {{comments.date}}</span>
+        </div>
+    {{/each}}
+   
 
     <h1>Enter a comment to this post</h1>
 
-    <textarea class="comment"></textarea>
-       
-    <a class="submit" href="/">Submit</a>
+    <textarea class="commentText"></textarea>
+    
+    <a class="submit" href="/" style="text-decoration: none;">Submit</a>
 
-
-    <p style="display: none;" id='{{PostsData.id}}' class="tableId"></p>
+</div>
+    
 
     <script rel="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/Javascript/BlogInfo.js"></script>

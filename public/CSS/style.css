@@ -41,7 +41,7 @@ nav a{
     justify-content: space-between;
     background-color: #000000FF;
     width: 90%;
-    height: 30px;
+    height: 60px;
    
 }
 
@@ -54,9 +54,22 @@ nav a{
     justify-content: center;
     background-color: #FFFFFFFF;
     width: 90%;
+    height: 50px;
+    
+}
+
+.infoPage{
+    background-color:beige;
+    height: 100vh;
+    
+}
+
+.allComments{
+    background-color: black;
     height: 30px;
     
 }
 
-
-
+.commentText{
+    width: 400px;
+}

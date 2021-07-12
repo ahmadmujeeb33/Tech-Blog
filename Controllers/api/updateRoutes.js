@@ -18,7 +18,7 @@ router.put('/:id', async(req,res) =>{
     
     );
       
- 
+    res.status(200).end();
    
 })
 

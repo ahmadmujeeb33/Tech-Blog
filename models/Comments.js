@@ -14,6 +14,11 @@ Comments.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW
+    },
     content: {
         type: DataTypes.STRING,
         allowNull: false,

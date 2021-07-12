@@ -1,12 +1,14 @@
 <div class="homePage">
     {{log loggedIn}}
-    {{#each allData as |Data|}}
+    <div class="Blog-Posts">
+        {{#each allData as |Data|}}
 
-        {{!-- {{log ../loggedIn}} --}}
-        <div class="Blog-Posts">
+        
+        
+            {{log ../loggedIn}}
             {{#if ../loggedIn}}
-               <a style="text-decoration:none" href="/login">
-                    <div class="Post">
+               <a  style="text-decoration:none;" href="/BlogInfo/{{Data.id}}">
+                    <div class="Post" style="margin-top: 30px;">
                         <span class="title">{{Data.title}}</span> 
                         <span class = "UserandDate" >Posted By {{Data.User.username}} on {{Data.date_created}}</span>
                     </div>
@@ -18,8 +20,8 @@
                 
 
             {{else}}
-                <a style="text-decoration:none" href="/login">
-                <div class="Post">
+                <a style="text-decoration:none; padding-top: 10px; " href="/login">
+                <div class="Post" style="margin-top:30px;">
                     <span>{{Data.title}}</span> 
                     <span>Posted By {{Data.User.username}} on {{Data.date_created}}</span>
                 </div>
@@ -29,9 +31,7 @@
 
             {{/if}}
 
-        </div>
-
-</div>  
+ 
     
     {{!-- <h1>User</h1>
     <p>{{Data.User.username}}</p>
@@ -43,4 +43,9 @@
     {{/each}} --}}
        
 
-{{/each}}
+            {{/each}}
+
+
+       </div>
+
+</div>  
