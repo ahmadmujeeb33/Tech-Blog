@@ -2,14 +2,17 @@
 
     <div class="infoPage">
         {{#each PostsData as |Data|}}
-
-            <div class="PostsCreated">
-                <a href="/dashboard/edit/{{Data.id}}" style="text-decoration: none;" class="title">{{Data.title}}</a>
-            </div>
+            <a href="/dashboard/edit/{{Data.id}}" style="text-decoration: none;">
+                <div class="PostsCreated"> 
+                    <p style="color: black;">{{Data.title}}</p>
+                    <p style="color: black;">{{Data.date_created}}</p>
+                </div>
+            </a>
 
         {{/each}}
 
-        <a href="/dashboard/new" style="color: green;text-decoration:none;">New post</a>
-
+        <div  style="color:#03396C; width:100%">
+            <a style="margin-top:60px;text-decoration:none;font-size:40px" href="/dashboard/new">New post</a>
+        </div>
     </div>
 </div>

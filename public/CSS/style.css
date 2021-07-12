@@ -7,7 +7,7 @@ body{
 nav{
     background-color: black;
     height: 150px;
-    padding: 0;
+    padding-bottom: 10px;
 }
 nav a{
     color: white;
@@ -18,7 +18,8 @@ nav a{
 .titleBorder{
     background-color:blue;
     width: 320px;
-    height: 130px;
+    height: 110px;
+    
 }
 
 .title{
@@ -78,5 +79,9 @@ nav a{
 
 .PostsCreated{
     background-color: white;
-    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
 }
