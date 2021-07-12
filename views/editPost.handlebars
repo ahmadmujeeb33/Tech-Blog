@@ -1,26 +1,43 @@
-<h1>Edit Post</h1>
 
-<div>
-    <p>Title</p>
+<br></br>
 
-    <p style="display: none;" id='{{postData.id}}' class="tableId"></p>
+<div style="background-color: teal; height:300px">
 
-    <textarea class="edittitle">{{postData.title}}</textarea>
-
-    <p>Content</p>
-
-    <textarea class="editcontent">{{postData.content}}</textarea>
-
-    <div class="Update">
-        <p class="id">Update</p>
+    <div style="display:flex;justify-content:center" class="newTitleContatiner">
+        <h1 style="color: white;">Edit Post</h1>
     </div>
 
-    <div class="Delete">
-        <p class="deletebutton">Delete</p>
+    <div style="display:flex;justify-content:center">
+        <div style="width:80%; display:flex;justify-content:center; flex-direction:column">
+            <p style="color: white;">Title</p>
+
+            <p style="display: none;" id='{{postData.id}}' class="tableId"></p>
+
+            <textarea class="edittitle">{{postData.title}}</textarea>
+
+            <p style="color: white;">Content</p>
+
+            <textarea class="editcontent">{{postData.content}}</textarea>
+
+        </div>
+
     </div>
-    
-    
+
 </div>
+
+    <br></br>
+
+    <div style = "cursor:pointer;background-color:#247ba0ff;font-size:25px;display:flex;justify-content:center" class="Update">
+        <p style="color: white;" class="id">Update</p>
+    </div>
+
+    <br></br>
+    <div style = "cursor:pointer;background-color:#247ba0ff;font-size:25px;display:flex;justify-content:center" class="Delete">
+        <p style="color: white;" class="deletebutton">Delete</p>
+    </div>
+    
+    
+
 
 <script rel="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/Javascript/edit.js"></script>
