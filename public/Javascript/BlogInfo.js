@@ -11,5 +11,7 @@ submit.addEventListener('click',async()=>{
         body: JSON.stringify({content, post_id:id}),
         headers: { 'Content-Type': 'application/json' },
       });
+
+    window.location.replace(`http://localhost:2081/BlogInfo/${id}`);
   
 })

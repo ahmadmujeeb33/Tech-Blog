@@ -16,8 +16,6 @@ document.querySelector('.createButton').addEventListener('click', async()=>{
 
     });
 
-    console.log("in here")
-
-    document.location.replace('/dashboard');
+    window.location.replace("http://localhost:2081/dashboard");
 
 });
