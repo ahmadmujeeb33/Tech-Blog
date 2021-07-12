@@ -1,17 +1,15 @@
 <div class="dashboard">
 
+    <div class="infoPage">
+        {{#each PostsData as |Data|}}
 
-    <h1>Dashboard</h1>
+            <div class="PostsCreated">
+                <a href="/dashboard/edit/{{Data.id}}" style="text-decoration: none;" class="title">{{Data.title}}</a>
+            </div>
 
-    {{#each PostsData as |Data|}}
+        {{/each}}
 
-        
-        <a href="/dashboard/edit/{{Data.id}}" class="title">{{Data.title}}</a>
-       
+        <a href="/dashboard/new" style="color: green;text-decoration:none;">New post</a>
 
-    {{/each}}
-
-    <a href="/dashboard/new" style="color: green;text-decoration:none;">New post</a>
-
-
+    </div>
 </div>

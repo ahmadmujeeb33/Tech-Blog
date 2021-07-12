@@ -60,8 +60,7 @@ nav a{
 
 .infoPage{
     background-color:beige;
-    height: 100vh;
-    
+    height: 100vh;    
 }
 
 .allComments{
@@ -75,4 +74,9 @@ nav a{
 
 .commentText{
     width: 400px;
+}
+
+.PostsCreated{
+    background-color: white;
+    padding-top: 20px;
 }
