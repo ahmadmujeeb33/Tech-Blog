@@ -16,15 +16,15 @@ nav a{
 }
 
 .titleBorder{
-    background-color:blue;
     width: 320px;
     height: 110px;
     
 }
 
 .title{
-    display: flex;
-    justify-content: center;
+    font-size: 2rem;
+    display: inline;
+    align-items: center;
 }
 
 .homePage{
@@ -97,5 +97,38 @@ nav a{
     display: flex;
     justify-content: center;
     /* flex-direction: column; */
+}
+
+.buttons{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.Update{
+    background-color:#247ba0ff;
+}
+
+.Delete{
+    background-color: red;
+}
+
+.newTitleContatiner{
+    display:flex;
+    justify-content:center;
+    background-image: linear-gradient( #F0EFEB, #E2ECE9, #BEE1E6);
+    border-top: 0.2rem solid #FAD2E1;
+ 
+    /* background-color: pink; */
+}
+
+.inputAreas{
+    background-image: linear-gradient(#BEE1E6,#DFE7FD,#FAD2E1,#EAE4E9,#CDDAFD);
+    border-bottom:  0.2rem solid #FAD2E1;
+    font-size: 1.2rem;
+    text-align: center;
+    color: gray;
 }
 

@@ -1,23 +1,23 @@
 
 <br></br>
 
-<div style="background-color: teal; height:300px">
+<div style="height:300px">
 
-    <div style="display:flex;justify-content:center" class="newTitleContatiner">
-        <h1 style="color: white;">Edit Post</h1>
+    <div class="newTitleContatiner">
+        <h1>Edit Post</h1>
     </div>
-
-    <div style="display:flex;justify-content:center">
+ 
+    <div style="display:flex;justify-content:center" class="inputAreas">
         <div style="width:80%; display:flex;justify-content:center; flex-direction:column">
-            <p style="color: white;">Title</p>
+            <p>Title</p>
 
             <p style="display: none;" id='{{postData.id}}' class="tableId"></p>
 
             <textarea class="edittitle">{{postData.title}}</textarea>
 
-            <p style="color: white;">Content</p>
+            <p>Content</p>
 
-            <textarea class="editcontent">{{postData.content}}</textarea>
+            <textarea class="editcontent" rows="5" cols="70">{{postData.content}}</textarea>
 
         </div>
 
@@ -27,16 +27,18 @@
 
     <br></br>
 
-    <div style = "cursor:pointer;background-color:#247ba0ff;font-size:25px;display:flex;justify-content:center" class="Update">
-        <p style="color: white;" class="id">Update</p>
-    </div>
+    <div class="buttons">
+        {{!-- <button style = "cursor:pointer;background-color:#247ba0ff;font-size:25px;display:flex;justify-content:center" class="Update"> --}}
+        <button style = "cursor:pointer;font-size:25px;" class="Update">
+            <p style="color: white;" class="id">Update</p>
+        </button>
 
-    <br></br>
-    <div style = "cursor:pointer;background-color:#247ba0ff;font-size:25px;display:flex;justify-content:center" class="Delete">
-        <p style="color: white;" class="deletebutton">Delete</p>
+        <br></br>
+        <button style = "cursor:pointer;font-size:25px;" class="Delete">
+            <p style="color: white;" class="deletebutton">Delete</p>
+        </button>
+    
     </div>
-    
-    
 
 
 <script rel="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
