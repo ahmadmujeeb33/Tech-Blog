@@ -16,6 +16,6 @@ document.querySelector('.createButton').addEventListener('click', async()=>{
 
     });
 
-    window.location.replace("http://localhost:2081/dashboard");
+    window.location.replace("/dashboard");
 
 });

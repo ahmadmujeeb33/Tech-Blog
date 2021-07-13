@@ -15,7 +15,7 @@ updateButton.on('click','.id',async function(){
         body: JSON.stringify({title:title1,content:content1}),  
         headers: { 'Content-Type': 'application/json' },
     }); 
-    window.location.replace("http://localhost:2081/dashboard");
+    window.location.replace("/dashboard");
     
 })
 
@@ -23,6 +23,6 @@ deleteButton.on('click','.deletebutton', async()=>{
     const response = await fetch(`/api/deletePosts/${id}`, {
         method: 'DELETE',
     });
-    window.location.replace("http://localhost:2081/dashboard");
+    window.location.replace("/dashboard");
 
 })

@@ -12,6 +12,6 @@ submit.addEventListener('click',async()=>{
         headers: { 'Content-Type': 'application/json' },
       });
 
-    window.location.replace(`http://localhost:2081/BlogInfo/${id}`);
+    window.location.replace(`/BlogInfo/${id}`);
   
 })
