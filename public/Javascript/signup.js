@@ -8,7 +8,6 @@
 
 const signupFormHandler = async (event) => {
     event.preventDefault();
-    alert("in here")
     const username = document.querySelector(".username-signup").value.trim();
     const password = document.querySelector(".password-signup").value.trim();
   
@@ -18,7 +17,6 @@ const signupFormHandler = async (event) => {
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-    alert("in this");
   
       if (response.ok) {
         document.location.replace('/');
