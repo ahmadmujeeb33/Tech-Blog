@@ -29,8 +29,6 @@ nav a{
 
 .homePage{
     background-color:beige;
-    height: 100vh;
-    max-height: 100vh;
     min-height: 100vh;
 }
 
