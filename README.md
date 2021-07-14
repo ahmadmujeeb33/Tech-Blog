@@ -6,4 +6,4 @@ Here is the link to my application
 
 https://techblog3246789.herokuapp.com/
 
-<img src = "TechBlog.PNG">
+<img src = "TechBlog.png">
